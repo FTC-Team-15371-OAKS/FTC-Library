@@ -14,7 +14,6 @@
     emptyAction: document.getElementById("empty-action"),
     statResources: document.getElementById("stat-resources"),
     statCategories: document.getElementById("stat-categories"),
-    statSeasons: document.getElementById("stat-seasons"),
     dialog: document.getElementById("resource-dialog"),
     dialogContent: document.getElementById("dialog-content"),
     dialogClose: document.getElementById("dialog-close"),
@@ -207,10 +206,8 @@
   }
 
   function renderStats() {
-    const seasons = new Set(state.resources.map((resource) => resource.season));
     els.statResources.textContent = String(state.resources.length);
     els.statCategories.textContent = String(state.categories.length);
-    els.statSeasons.textContent = String(seasons.size);
   }
 
   function renderCategoryChips() {
