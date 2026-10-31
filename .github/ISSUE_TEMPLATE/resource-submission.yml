@@ -1,0 +1,139 @@
+name: Submit a resource
+description: Propose an FTC engineering resource for the community library.
+title: "[Resource] "
+labels: ["resource-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing. Use this form when you cannot use the website's submission form.
+
+        After creating the issue, drag your files into the issue comment box. GitHub accepts files up to 25 MB each. For larger files, link to a public GitHub release, drive, or Onshape document.
+
+  - type: input
+    id: resource-name
+    attributes:
+      label: Resource name
+      placeholder: Swerve drive CAD and build guide
+    validations:
+      required: true
+
+  - type: input
+    id: team-number
+    attributes:
+      label: Team number
+      description: The team that created the resource.
+      placeholder: "15371"
+    validations:
+      required: true
+
+  - type: input
+    id: team-name
+    attributes:
+      label: Team name
+      placeholder: OAKS
+
+  - type: dropdown
+    id: season
+    attributes:
+      label: Season
+      options:
+        - Every season
+        - Multiple seasons
+        - 2026-27
+        - 2025-26
+        - 2024-25
+        - 2023-24
+        - 2022-23
+        - 2021-22
+        - 2020-21
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Engineering Portfolios
+        - CAD Models
+        - Programming
+        - Electronics
+        - Documentation
+        - Tools and Resources
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the resource, what problem does it solve, and when is it useful?
+      placeholder: Describe the resource, the season or mechanism it applies to, and anything another team should know before using it.
+    validations:
+      required: true
+
+  - type: input
+    id: attribution
+    attributes:
+      label: Attribution / original source
+      description: Credit the creator. Mention if this is adapted from another team's work.
+      placeholder: Created by FTC Team 15371 OAKS
+    validations:
+      required: true
+
+  - type: input
+    id: source-url
+    attributes:
+      label: Source URL
+      description: Optional original page, repository, or document.
+      placeholder: https://github.com/team/project
+
+  - type: dropdown
+    id: license
+    attributes:
+      label: License
+      options:
+        - CC BY 4.0
+        - CC BY-SA 4.0
+        - CC BY-NC 4.0
+        - CC BY-NC-SA 4.0
+        - CC0 1.0 / Public domain
+        - MIT
+        - Apache-2.0
+        - BSD-3-Clause
+        - BSD-3-Clause-Clear
+        - Other (explain in the description)
+        - No license specified
+    validations:
+      required: true
+
+  - type: textarea
+    id: links
+    attributes:
+      label: File or documentation links
+      description: One public http(s) URL per line. You can attach files after creating the issue.
+      placeholder: |
+        https://cad.onshape.com/documents/example
+        https://github.com/team/example
+
+  - type: input
+    id: submitted-by
+    attributes:
+      label: Submitted by
+      description: Optional name, team, or GitHub handle.
+      placeholder: Your name or team
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Contributor checklist
+      options:
+        - label: I created this resource or have permission from the creator to share it.
+          required: true
+        - label: The team number, season, attribution, and license information are accurate.
+          required: true
+        - label: I understand that approved resources are public and keep their stated license.
+          required: true
+        - label: This resource does not contain private information that I am not allowed to publish.
+          required: true

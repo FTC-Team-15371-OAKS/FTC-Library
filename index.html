@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FTC-Library — Community-maintained FTC engineering resources</title>
+    <meta
+      name="description"
+      content="Browse and share FTC engineering portfolios, CAD models, programming libraries, electronics guides, and documentation. Built by the FTC community."
+    />
+    <meta name="theme-color" content="#0a1730" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FTC-Library" />
+    <meta
+      property="og:description"
+      content="A centralized, searchable library of FTC engineering resources."
+    />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="FTC-Library home">
+          <svg class="brand-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect x="3" y="7" width="19" height="5" rx="2.5" fill="currentColor" opacity=".28" />
+            <rect x="3" y="15" width="28" height="5" rx="2.5" fill="currentColor" opacity=".58" />
+            <rect x="3" y="23" width="22" height="5" rx="2.5" fill="currentColor" />
+            <circle cx="30" cy="25.5" r="3" fill="#ee6c2d" />
+          </svg>
+          <span>FTC<span class="brand-accent">-</span>Library</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary" data-nav>
+          <a class="nav-link" href="#library" aria-current="page">Browse</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="button button--primary button--sm" href="submit.html">Submit a resource</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <p class="eyebrow">Community-maintained FTC engineering library</p>
+            <h1>Every robot teaches. <span>Share what yours learned.</span></h1>
+            <p class="hero-copy">
+              Find CAD, code, engineering portfolios, and hard-won documentation from teams
+              across seasons. Everything is reviewed, attributed, and free to explore.
+            </p>
+            <div class="hero-actions">
+              <a class="button button--primary" href="#library">
+                Browse the library
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10h12m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a class="button button--ghost" href="submit.html">Share a resource</a>
+            </div>
+            <div class="hero-stats" aria-label="Library statistics">
+              <div class="hero-stat">
+                <strong id="stat-resources">—</strong>
+                <span>Resources</span>
+              </div>
+              <div class="hero-stat">
+                <strong id="stat-categories">—</strong>
+                <span>Categories</span>
+              </div>
+              <div class="hero-stat">
+                <strong id="stat-seasons">—</strong>
+                <span>Seasons</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel" aria-hidden="true">
+            <span class="panel-badge">JSON + GitHub</span>
+            <div class="panel-bar">
+              <span class="panel-dots"><span></span><span></span><span></span></span>
+              <span class="panel-title">data/resources.json</span>
+            </div>
+            <pre class="hero-code"><span class="code-dim">{</span>
+  <span class="code-key">"team"</span>: <span class="code-value">15371</span>,
+  <span class="code-key">"season"</span>: <span class="code-string">"2025-26"</span>,
+  <span class="code-key">"category"</span>: <span class="code-string">"cad-models"</span>,
+  <span class="code-key">"license"</span>: <span class="code-string">"CC BY 4.0"</span>,
+  <span class="code-key">"files"</span>: [<span class="code-string">"robot.step"</span>],
+  <span class="code-key">"status"</span>: <span class="code-string">"approved"</span>
+<span class="code-dim">}</span></pre>
+            <div class="panel-footer">
+              <span>Reviewed by maintainers</span>
+              <span class="panel-status">Public</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="library-section" id="library">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Resource library</p>
+              <h2>Find the right starting point.</h2>
+            </div>
+            <p>
+              Search by resource name, team number, season, or category. Open a resource to
+              see its attribution, license, and download links.
+            </p>
+          </div>
+
+          <div class="search-panel">
+            <label class="sr-only" for="search-input">Search resources</label>
+            <div class="search-field">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8" />
+                <path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Search resources, teams, seasons, or tags…"
+                autocomplete="off"
+                spellcheck="false"
+                aria-keyshortcuts="/"
+              />
+              <kbd aria-hidden="true">/</kbd>
+            </div>
+
+            <div
+              class="category-chips"
+              id="category-chips"
+              role="group"
+              aria-label="Filter by category"
+            ></div>
+
+            <div class="filters-row">
+              <label class="filter-field">
+                <span>Season</span>
+                <span class="select-wrap">
+                  <select id="season-filter">
+                    <option value="">All seasons</option>
+                  </select>
+                </span>
+              </label>
+              <label class="filter-field">
+                <span>Team</span>
+                <span class="select-wrap">
+                  <select id="team-filter">
+                    <option value="">All teams</option>
+                  </select>
+                </span>
+              </label>
+              <button class="text-button clear-filters" id="clear-filters" type="button" hidden>
+                Clear filters
+              </button>
+              <span class="filters-spacer"></span>
+              <span class="result-count" id="result-count" aria-live="polite">
+                Loading library…
+              </span>
+            </div>
+          </div>
+
+          <div class="resource-grid" id="resource-grid" aria-busy="true"></div>
+
+          <div class="empty-state" id="empty-state" hidden>
+            <div class="empty-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 7.5A2.5 2.5 0 0 1 7.5 5H19v14H7.5A2.5 2.5 0 0 1 5 16.5v-9Z" stroke="currentColor" stroke-width="1.8" />
+                <path d="M5 16.5A2.5 2.5 0 0 1 7.5 14H19" stroke="currentColor" stroke-width="1.8" />
+                <path d="M9 8h6M9 11h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 id="empty-title">No resources match those filters.</h3>
+            <p id="empty-copy">
+              Try a broader search, or be the first team to share this kind of resource.
+            </p>
+            <button class="button button--outline" id="empty-action" type="button">
+              Clear filters
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--surface">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">How it works</p>
+              <h2>GitHub does the heavy lifting.</h2>
+            </div>
+            <p>
+              No account on this site. No custom upload server. Submissions use the tools
+              teams already have.
+            </p>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card" data-step="01">
+              <span class="step-number">01</span>
+              <h3>Describe the resource</h3>
+              <p>
+                Use the <a href="submit.html">submission form</a> to collect the team,
+                season, category, license, attribution, and links.
+              </p>
+            </article>
+            <article class="step-card" data-step="02">
+              <span class="step-number">02</span>
+              <h3>Open a GitHub issue</h3>
+              <p>
+                The form prepares a prefilled issue. Attach files or paste links, then submit
+                it to the library repository.
+              </p>
+            </article>
+            <article class="step-card" data-step="03">
+              <span class="step-number">03</span>
+              <h3>Get reviewed and published</h3>
+              <p>
+                A maintainer checks attribution and licensing. Approved resources are added
+                to the JSON library and appear here.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-panel">
+            <div>
+              <p class="eyebrow eyebrow--light">Build the library</p>
+              <h2>Your team solved a problem. Another team needs that answer.</h2>
+              <p>
+                Share a mechanism, a working autonomous routine, a portfolio, or the guide
+                you wish existed during your rookie season.
+              </p>
+            </div>
+            <div class="cta-actions">
+              <a class="button button--primary" href="submit.html">Submit a resource</a>
+              <a class="button button--ghost" href="about.html">Read the guidelines</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="./" aria-label="FTC-Library home">
+              <svg class="brand-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                <rect x="3" y="7" width="19" height="5" rx="2.5" fill="currentColor" opacity=".28" />
+                <rect x="3" y="15" width="28" height="5" rx="2.5" fill="currentColor" opacity=".58" />
+                <rect x="3" y="23" width="22" height="5" rx="2.5" fill="currentColor" />
+                <circle cx="30" cy="25.5" r="3" fill="#ee6c2d" />
+              </svg>
+              <span>FTC<span class="brand-accent">-</span>Library</span>
+            </a>
+            <p>
+              A centralized, community-maintained library of FTC engineering knowledge.
+              Independent project, not affiliated with or endorsed by FIRST.
+            </p>
+          </div>
+          <div>
+            <p class="footer-title">Library</p>
+            <div class="footer-links">
+              <a href="#library">Browse resources</a>
+              <a href="submit.html">Submit a resource</a>
+              <a href="about.html">About and guidelines</a>
+              <a href="data/resources.json">View resource data</a>
+            </div>
+          </div>
+          <div>
+            <p class="footer-title">Contribute</p>
+            <div class="footer-links">
+              <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+              <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/issues/new?template=resource-submission.yml" target="_blank" rel="noopener noreferrer">GitHub issue form</a>
+              <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contributing guide</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> FTC-Library contributors. Resources keep their own licenses.</span>
+          <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Site code licensed under MIT</a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="resource-dialog" id="resource-dialog" aria-labelledby="resource-dialog-title">
+      <div class="dialog-shell">
+        <button class="dialog-close" type="button" id="dialog-close" aria-label="Close resource details">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div id="dialog-content"></div>
+      </div>
+    </dialog>
+  </body>
+</html>

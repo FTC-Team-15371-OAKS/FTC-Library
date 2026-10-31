@@ -1,0 +1,14 @@
+{
+  "name": "ftc-library",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A community-maintained library of FTC engineering resources.",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-resources.mjs",
+    "serve": "python3 -m http.server 8080"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

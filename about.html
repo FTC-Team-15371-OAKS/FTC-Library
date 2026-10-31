@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — FTC-Library</title>
+    <meta
+      name="description"
+      content="How FTC-Library collects, reviews, attributes, and publishes community engineering resources."
+    />
+    <meta name="theme-color" content="#0a1730" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About — FTC-Library" />
+    <meta
+      property="og:description"
+      content="A centralized, searchable, community-maintained library of FTC engineering knowledge."
+    />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="FTC-Library home">
+          <svg class="brand-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect x="3" y="7" width="19" height="5" rx="2.5" fill="currentColor" opacity=".28" />
+            <rect x="3" y="15" width="28" height="5" rx="2.5" fill="currentColor" opacity=".58" />
+            <rect x="3" y="23" width="22" height="5" rx="2.5" fill="currentColor" />
+            <circle cx="30" cy="25.5" r="3" fill="#ee6c2d" />
+          </svg>
+          <span>FTC<span class="brand-accent">-</span>Library</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary" data-nav>
+          <a class="nav-link" href="index.html#library">Browse</a>
+          <a class="nav-link" href="about.html" aria-current="page">About</a>
+          <a class="button button--primary button--sm" href="submit.html">Submit a resource</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">About the library</p>
+          <h1>A library, not another social network.</h1>
+          <p>
+            FTC-Library exists to keep useful engineering work from disappearing when a
+            season ends. It is a centralized, searchable, community-maintained collection
+            of resources that teams can actually reuse.
+          </p>
+        </div>
+      </section>
+
+      <section class="page-main">
+        <div class="container about-grid">
+          <div class="prose">
+            <h2>Why this exists</h2>
+            <p>
+              Every season, teams solve hard problems: a drivetrain that finally drives
+              straight, an autonomous routine that survives a crowded field, a portfolio
+              structure that communicates the engineering process clearly. Too often that
+              work lives in one team's drive folder or disappears with a graduating class.
+            </p>
+            <p>
+              The library gives that work a stable home. It does not try to rank teams,
+              host discussions, or become a destination for daily updates. It organizes
+              resources, preserves attribution, and makes them easier to find next season.
+            </p>
+
+            <h2>What belongs in the library</h2>
+            <p>
+              A resource should be useful to another team. It can be a finished artifact,
+              a reference, or a guide that explains a process.
+            </p>
+            <ul>
+              <li><strong>Engineering Portfolios:</strong> published portfolios, notebook excerpts, and judging resources.</li>
+              <li><strong>CAD Models:</strong> STEP, STL, native CAD, field models, mechanisms, and reusable assemblies.</li>
+              <li><strong>Programming:</strong> libraries, autonomous routines, vision tools, SDK extensions, and example code.</li>
+              <li><strong>Electronics:</strong> wiring references, control system guides, sensor notes, and hardware documentation.</li>
+              <li><strong>Documentation:</strong> game manuals, technical guides, checklists, and season reference material.</li>
+              <li><strong>Tools and Resources:</strong> dashboards, calculators, templates, and other build-season utilities.</li>
+            </ul>
+
+            <div class="callout">
+              <p>
+                <strong>Rule of thumb:</strong> if another team could learn from it, build on
+                it, or avoid repeating a mistake because of it, it belongs here.
+              </p>
+            </div>
+
+            <h2>How review works</h2>
+            <p>
+              The library deliberately uses GitHub instead of a custom backend. That keeps
+              the project cheap to run and easy to audit.
+            </p>
+            <ol class="workflow-list">
+              <li>
+                <strong>Submit through the form or GitHub issue template.</strong>
+                <span>The submission includes files or links plus the required metadata.</span>
+              </li>
+              <li>
+                <strong>A maintainer checks the basics.</strong>
+                <span>Team, season, category, description, attribution, license, and access links are reviewed.</span>
+              </li>
+              <li>
+                <strong>Approved resources are committed.</strong>
+                <span>Files are stored in the repository and the resource is added to <code>data/resources.json</code>.</span>
+              </li>
+              <li>
+                <strong>The library updates automatically.</strong>
+                <span>GitHub Pages serves the site, and client-side search reads the updated JSON.</span>
+              </li>
+            </ol>
+
+            <h2>Attribution and licensing</h2>
+            <p>
+              Every resource must name its creator or original source and state a license.
+              If a submission is adapted from another team's work, say so. If the license is
+              unclear, do not submit the files; link to the original instead.
+            </p>
+            <p>
+              The site code is licensed under MIT. Resources keep their own licenses, and
+              nothing in this library overrides the terms chosen by a resource's creator.
+            </p>
+
+            <p>
+              Maintainers can find the detailed schema, review checklist, and file layout in
+              the <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">contributing guide</a>.
+            </p>
+          </div>
+
+          <aside class="about-aside">
+            <h2>Project at a glance</h2>
+            <ul class="category-list-mini">
+              <li><span>Submission</span><span>GitHub issue</span></li>
+              <li><span>Review</span><span>Maintainer</span></li>
+              <li><span>Storage</span><span>GitHub repo</span></li>
+              <li><span>Website</span><span>GitHub Pages</span></li>
+              <li><span>Search</span><span>Client-side</span></li>
+              <li><span>Metadata</span><span>JSON</span></li>
+            </ul>
+            <a class="button button--primary button--block" href="submit.html">Submit a resource</a>
+            <p class="helper-text">
+              Independent community project. Not affiliated with or endorsed by FIRST.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-panel">
+            <div>
+              <p class="eyebrow eyebrow--light">Keep the knowledge moving</p>
+              <h2>If it helped your team, it can help another one.</h2>
+              <p>
+                Add the guide, model, or routine you wish your team had found sooner.
+              </p>
+            </div>
+            <div class="cta-actions">
+              <a class="button button--primary" href="submit.html">Submit a resource</a>
+              <a class="button button--ghost" href="index.html#library">Browse the library</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="./" aria-label="FTC-Library home">
+              <svg class="brand-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                <rect x="3" y="7" width="19" height="5" rx="2.5" fill="currentColor" opacity=".28" />
+                <rect x="3" y="15" width="28" height="5" rx="2.5" fill="currentColor" opacity=".58" />
+                <rect x="3" y="23" width="22" height="5" rx="2.5" fill="currentColor" />
+                <circle cx="30" cy="25.5" r="3" fill="#ee6c2d" />
+              </svg>
+              <span>FTC<span class="brand-accent">-</span>Library</span>
+            </a>
+            <p>
+              A centralized, community-maintained library of FTC engineering knowledge.
+              Independent project, not affiliated with or endorsed by FIRST.
+            </p>
+          </div>
+          <div>
+            <p class="footer-title">Library</p>
+            <div class="footer-links">
+              <a href="index.html#library">Browse resources</a>
+              <a href="submit.html">Submit a resource</a>
+              <a href="about.html">About and guidelines</a>
+              <a href="data/resources.json">View resource data</a>
+            </div>
+          </div>
+          <div>
+            <p class="footer-title">Contribute</p>
+            <div class="footer-links">
+              <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+              <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/issues/new?template=resource-submission.yml" target="_blank" rel="noopener noreferrer">GitHub issue form</a>
+              <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contributing guide</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> FTC-Library contributors. Resources keep their own licenses.</span>
+          <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Site code licensed under MIT</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

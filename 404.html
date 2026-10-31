@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base id="site-base" href="/" />
+    <script>
+      (() => {
+        if (!location.hostname.endsWith("github.io")) return;
+        const repo = location.pathname.split("/").filter(Boolean)[0];
+        if (repo) document.getElementById("site-base").href = `/${repo}/`;
+      })();
+    </script>
+    <title>Page not found — FTC-Library</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="FTC-Library home">
+          <svg class="brand-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect x="3" y="7" width="19" height="5" rx="2.5" fill="currentColor" opacity=".28" />
+            <rect x="3" y="15" width="28" height="5" rx="2.5" fill="currentColor" opacity=".58" />
+            <rect x="3" y="23" width="22" height="5" rx="2.5" fill="currentColor" />
+            <circle cx="30" cy="25.5" r="3" fill="#ee6c2d" />
+          </svg>
+          <span>FTC<span class="brand-accent">-</span>Library</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary" data-nav>
+          <a class="nav-link" href="index.html#library">Browse</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="button button--primary button--sm" href="submit.html">Submit a resource</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">404</p>
+          <h1>That resource moved off the field.</h1>
+          <p>
+            The page you requested does not exist. Head back to the library, or search for
+            the team, season, or category you need.
+          </p>
+          <div class="hero-actions" style="margin-top: 24px">
+            <a class="button button--primary" href="index.html#library">Browse the library</a>
+            <a class="button button--outline" href="submit.html">Submit a resource</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom" style="margin-top: 0; border-top: 0">
+        <span>© <span data-year>2026</span> FTC-Library contributors. Resources keep their own licenses.</span>
+        <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+      </div>
+    </footer>
+  </body>
+</html>

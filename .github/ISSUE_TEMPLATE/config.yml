@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Browse the library
+    url: https://github.com/FTC-Team-15371-OAKS/FTC-Library#readme
+    about: Learn about the project and find local development instructions.
+  - name: Contributing guide
+    url: https://github.com/FTC-Team-15371-OAKS/FTC-Library/blob/main/CONTRIBUTING.md
+    about: Read the submission requirements and maintainer review checklist.

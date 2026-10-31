@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-31",
+  "categories": [
+    {
+      "id": "engineering-portfolios",
+      "name": "Engineering Portfolios",
+      "icon": "portfolio",
+      "description": "Award submissions, notebook excerpts, and portfolio resources that show how teams document their engineering story."
+    },
+    {
+      "id": "cad-models",
+      "name": "CAD Models",
+      "icon": "cad",
+      "description": "STEP, STL, native CAD, field models, and reusable mechanisms."
+    },
+    {
+      "id": "programming",
+      "name": "Programming",
+      "icon": "programming",
+      "description": "Libraries, autonomous path followers, vision tools, SDKs, and code you can build on."
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "icon": "electronics",
+      "description": "Wiring references, control system guides, sensor notes, and hardware documentation."
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation",
+      "icon": "documentation",
+      "description": "Game manuals, technical guides, checklists, and season reference material."
+    },
+    {
+      "id": "tools-resources",
+      "name": "Tools and Resources",
+      "icon": "tools",
+      "description": "Utilities, dashboards, templates, and other resources that make build season easier."
+    }
+  ],
+  "resources": [
+    {
+      "id": "first-ftc-sdk",
+      "name": "FTC Robot Controller SDK",
+      "description": "The official Android Studio workspace for FTC robot programming. Includes the Robot Controller app, Driver Station app, sample OpModes, and the hardware and sensor APIs used by most FTC codebases.",
+      "category": "programming",
+      "season": "Every season",
+      "teamNumber": null,
+      "teamName": "FIRST Tech Challenge",
+      "source": "https://github.com/FIRST-Tech-Challenge/FtcRobotController",
+      "attribution": "FIRST Tech Challenge",
+      "license": "BSD-3-Clause-Clear",
+      "tags": ["java", "android-studio", "robot-controller", "official"],
+      "links": [
+        {
+          "label": "View repository",
+          "url": "https://github.com/FIRST-Tech-Challenge/FtcRobotController"
+        }
+      ],
+      "files": [],
+      "addedAt": "2026-10-31"
+    },
+    {
+      "id": "acme-road-runner",
+      "name": "Road Runner",
+      "description": "A motion planning library for FTC that generates smooth paths and provides trajectory following, dead-wheel odometry, and tunable drive constraints.",
+      "category": "programming",
+      "season": "Every season",
+      "teamNumber": null,
+      "teamName": "ACME Robotics",
+      "source": "https://github.com/acmerobotics/road-runner",
+      "attribution": "ACME Robotics",
+      "license": "MIT",
+      "tags": ["autonomous", "motion-planning", "odometry", "java"],
+      "links": [
+        {
+          "label": "View repository",
+          "url": "https://github.com/acmerobotics/road-runner"
+        }
+      ],
+      "files": [],
+      "addedAt": "2026-10-31"
+    },
+    {
+      "id": "pedro-pathing",
+      "name": "Pedro Pathing",
+      "description": "A path-following library focused on fast autonomous routines with localizers, parametric paths, and a visual path builder.",
+      "category": "programming",
+      "season": "Every season",
+      "teamNumber": null,
+      "teamName": "Pedro Pathing contributors",
+      "source": "https://github.com/Pedro-Pathing/PedroPathing",
+      "attribution": "Pedro Pathing contributors",
+      "license": "BSD-3-Clause",
+      "tags": ["autonomous", "path-following", "localization", "java"],
+      "links": [
+        {
+          "label": "View repository",
+          "url": "https://github.com/Pedro-Pathing/PedroPathing"
+        }
+      ],
+      "files": [],
+      "addedAt": "2026-10-31"
+    },
+    {
+      "id": "ftclib",
+      "name": "FTCLib",
+      "description": "A community library that extends the FTC SDK with command-based programming, gamepad helpers, motor wrappers, and reusable subsystem utilities.",
+      "category": "programming",
+      "season": "Every season",
+      "teamNumber": null,
+      "teamName": "FTCLib contributors",
+      "source": "https://github.com/FTCLib/FTCLib",
+      "attribution": "FTCLib contributors",
+      "license": "BSD-3-Clause",
+      "tags": ["java", "commands", "library", "subsystems"],
+      "links": [
+        {
+          "label": "View repository",
+          "url": "https://github.com/FTCLib/FTCLib"
+        }
+      ],
+      "files": [],
+      "addedAt": "2026-10-31"
+    },
+    {
+      "id": "acme-ftc-dashboard",
+      "name": "FTC Dashboard",
+      "description": "A web-based telemetry and tuning dashboard for FTC. Inspect live robot data, tune control loops, and visualize field positions during development.",
+      "category": "tools-resources",
+      "season": "Every season",
+      "teamNumber": null,
+      "teamName": "ACME Robotics",
+      "source": "https://github.com/acmerobotics/ftc-dashboard",
+      "attribution": "ACME Robotics",
+      "license": "BSD-3-Clause",
+      "tags": ["telemetry", "tuning", "dashboard", "debugging"],
+      "links": [
+        {
+          "label": "View repository",
+          "url": "https://github.com/acmerobotics/ftc-dashboard"
+        }
+      ],
+      "files": [],
+      "addedAt": "2026-10-31"
+    },
+    {
+      "id": "game-manual-0",
+      "name": "Game Manual 0",
+      "description": "A community-written guide covering FTC hardware, CAD, programming, control systems, awards, and team operations. A strong first stop for new teams.",
+      "category": "documentation",
+      "season": "Every season",
+      "teamNumber": null,
+      "teamName": "Game Manual 0 contributors",
+      "source": "https://gm0.org/",
+      "attribution": "Game Manual 0 contributors",
+      "license": "CC BY-NC 2.0",
+      "tags": ["guide", "hardware", "software", "awards", "rookie"],
+      "links": [
+        {
+          "label": "Read the manual",
+          "url": "https://gm0.org/"
+        }
+      ],
+      "files": [],
+      "addedAt": "2026-10-31"
+    },
+    {
+      "id": "gm0-wiring-guide",
+      "name": "FTC Wiring Guide",
+      "description": "A practical guide to FTC control system wiring, connector types, motor and servo connections, and common electrical pitfalls.",
+      "category": "electronics",
+      "season": "Every season",
+      "teamNumber": null,
+      "teamName": "Game Manual 0 contributors",
+      "source": "https://gm0.org/en/latest/docs/power-and-electronics/wiring.html",
+      "attribution": "Game Manual 0 contributors",
+      "license": "CC BY-NC 2.0",
+      "tags": ["wiring", "control-system", "motors", "servos", "electrical"],
+      "links": [
+        {
+          "label": "Read the wiring guide",
+          "url": "https://gm0.org/en/latest/docs/power-and-electronics/wiring.html"
+        }
+      ],
+      "files": [],
+      "addedAt": "2026-10-31"
+    },
+    {
+      "id": "team-25710-openvault-portfolios",
+      "name": "OpenVault FTC Portfolio Archive",
+      "description": "A searchable archive of published FTC engineering portfolios organized by season. Each portfolio remains the work of the team that produced it.",
+      "category": "engineering-portfolios",
+      "season": "Multiple seasons",
+      "teamNumber": "25710",
+      "teamName": "Alpine Robotics",
+      "source": "https://www.open-vault-ftc.org/portfolios/portfolios",
+      "attribution": "OpenVault, maintained by FTC Team 25710 Alpine Robotics",
+      "license": "CC BY-NC-SA 4.0",
+      "tags": ["portfolio", "archive", "awards", "judging"],
+      "links": [
+        {
+          "label": "Browse portfolios",
+          "url": "https://www.open-vault-ftc.org/portfolios/portfolios"
+        }
+      ],
+      "files": [],
+      "addedAt": "2026-10-31"
+    },
+    {
+      "id": "onshape-biobuzz-field-model",
+      "name": "BIOBUZZ FTC Field Model",
+      "description": "The official BIOBUZZ (2026-27) FTC field model in Onshape for reference geometry, robot sizing, and field-element planning.",
+      "category": "cad-models",
+      "season": "2026-27",
+      "teamNumber": null,
+      "teamName": "Onshape and FIRST",
+      "source": "https://cad.onshape.com/documents/a355e772e3d24813de7852ee/w/f106353168f1f92100b81259/e/95d1e1e442b4138cccaf2d73",
+      "attribution": "Onshape and FIRST Tech Challenge",
+      "license": "Onshape terms of use",
+      "tags": ["onshape", "biobuzz", "field", "reference", "cad"],
+      "links": [
+        {
+          "label": "Open BIOBUZZ field in Onshape",
+          "url": "https://cad.onshape.com/documents/a355e772e3d24813de7852ee/w/f106353168f1f92100b81259/e/95d1e1e442b4138cccaf2d73"
+        }
+      ],
+      "files": [],
+      "addedAt": "2026-10-31"
+    },
+    {
+      "id": "first-ftc-game-manual",
+      "name": "FTC Competition Manual",
+      "description": "The official competition manual for the current FTC season, including game rules, robot inspection requirements, and tournament procedures.",
+      "category": "documentation",
+      "season": "2026-27",
+      "teamNumber": null,
+      "teamName": "FIRST Tech Challenge",
+      "source": "https://ftc-resources.firstinspires.org/ftc/game/manual",
+      "attribution": "FIRST Tech Challenge",
+      "license": "FIRST terms of use",
+      "tags": ["rules", "game-manual", "inspection", "official"],
+      "links": [
+        {
+          "label": "Open the manual",
+          "url": "https://ftc-resources.firstinspires.org/ftc/game/manual"
+        }
+      ],
+      "files": [],
+      "addedAt": "2026-10-31"
+    }
+  ]
+}

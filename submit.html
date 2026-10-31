@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Submit a resource — FTC-Library</title>
+    <meta
+      name="description"
+      content="Submit an FTC engineering resource to the community library. Describe the resource, add attribution and licensing, then open a prefilled GitHub issue."
+    />
+    <meta name="theme-color" content="#0a1730" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Submit a resource — FTC-Library" />
+    <meta
+      property="og:description"
+      content="Share CAD, code, portfolios, electronics guides, and documentation with the FTC community."
+    />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/submit.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="FTC-Library home">
+          <svg class="brand-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect x="3" y="7" width="19" height="5" rx="2.5" fill="currentColor" opacity=".28" />
+            <rect x="3" y="15" width="28" height="5" rx="2.5" fill="currentColor" opacity=".58" />
+            <rect x="3" y="23" width="22" height="5" rx="2.5" fill="currentColor" />
+            <circle cx="30" cy="25.5" r="3" fill="#ee6c2d" />
+          </svg>
+          <span>FTC<span class="brand-accent">-</span>Library</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary" data-nav>
+          <a class="nav-link" href="index.html#library">Browse</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="button button--primary button--sm" href="submit.html" aria-current="page">Submit a resource</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Contribute</p>
+          <h1>Share a resource with the community.</h1>
+          <p>
+            Fill in the details below and the site will prepare a GitHub issue for you.
+            Attach your files to that issue, and a maintainer will review the submission.
+            No account on this site is required.
+          </p>
+        </div>
+      </section>
+
+      <section class="page-main">
+        <div class="container">
+          <div class="submit-layout">
+            <div>
+              <noscript>
+                <div class="noscript-note">
+                  This form uses JavaScript to prepare the GitHub issue. You can still
+                  <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/issues/new?template=resource-submission.yml">use the GitHub issue form directly</a>.
+                </div>
+              </noscript>
+
+              <form class="submission-form" id="submission-form" novalidate>
+                <section class="form-card" aria-labelledby="basics-heading">
+                  <h2 id="basics-heading">Resource basics</h2>
+                  <p class="form-card-sub">
+                    Start with the information someone would use to find this resource.
+                  </p>
+
+                  <div class="field-grid">
+                    <div class="field field--full">
+                      <label for="resource-name">Resource name <span class="required" aria-hidden="true">*</span></label>
+                      <input
+                        class="input"
+                        id="resource-name"
+                        name="name"
+                        type="text"
+                        maxlength="120"
+                        placeholder="Swerve drive CAD and build guide"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="team-number">Team number <span class="required" aria-hidden="true">*</span></label>
+                      <input
+                        class="input"
+                        id="team-number"
+                        name="teamNumber"
+                        type="text"
+                        inputmode="numeric"
+                        pattern="[0-9]{1,6}"
+                        maxlength="6"
+                        placeholder="15371"
+                        autocomplete="off"
+                        required
+                      />
+                      <span class="field-hint">Use the team that created the resource, even if another team is submitting it.</span>
+                    </div>
+                    <div class="field">
+                      <label for="team-name">Team name</label>
+                      <input
+                        class="input"
+                        id="team-name"
+                        name="teamName"
+                        type="text"
+                        maxlength="120"
+                        placeholder="OAKS"
+                        autocomplete="organization"
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="season">Season <span class="required" aria-hidden="true">*</span></label>
+                      <select class="select" id="season" name="season" required>
+                        <option value="">Select a season</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="category">Category <span class="required" aria-hidden="true">*</span></label>
+                      <select class="select" id="category" name="category" required>
+                        <option value="">Select a category</option>
+                      </select>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="form-card" aria-labelledby="description-heading">
+                  <h2 id="description-heading">Description and discovery</h2>
+                  <p class="form-card-sub">
+                    Help teams understand what the resource is and when it is useful.
+                  </p>
+
+                  <div class="field">
+                    <label for="description">Description <span class="required" aria-hidden="true">*</span></label>
+                    <textarea
+                      class="textarea"
+                      id="description"
+                      name="description"
+                      minlength="20"
+                      maxlength="1000"
+                      placeholder="Describe the resource, what problem it solves, and anything another team should know before using it."
+                      required
+                    ></textarea>
+                    <span class="field-hint">20–1000 characters. Be specific about the season, mechanism, or software version where it applies.</span>
+                  </div>
+
+                  <div class="field">
+                    <label for="tags">Tags</label>
+                    <input
+                      class="input"
+                      id="tags"
+                      name="tags"
+                      type="text"
+                      maxlength="120"
+                      placeholder="swerve, drivetrain, gobilda"
+                      autocomplete="off"
+                    />
+                    <span class="field-hint">Comma-separated. Tags help with search but are not required.</span>
+                  </div>
+
+                  <div class="field">
+                    <label for="resource-links">File or documentation links</label>
+                    <textarea
+                      class="textarea textarea--short"
+                      id="resource-links"
+                      name="links"
+                      placeholder="https://cad.onshape.com/documents/example&#10;https://github.com/team/example"
+                    ></textarea>
+                    <span class="field-hint">One public http(s) URL per line. You will attach files to the GitHub issue after it opens.</span>
+                  </div>
+
+                  <div class="form-note">
+                    <strong>Files:</strong> after GitHub opens the issue, drag PDFs, STEP, STL,
+                    source archives, images, or documentation into the issue comment box.
+                    GitHub accepts files up to 25 MB each. For larger files, link to a public
+                    drive, GitHub release, or Onshape document.
+                  </div>
+                </section>
+
+                <section class="form-card" aria-labelledby="attribution-heading">
+                  <h2 id="attribution-heading">Attribution and license</h2>
+                  <p class="form-card-sub">
+                    Every resource must credit its creator and state how others may use it.
+                  </p>
+
+                  <div class="field-grid">
+                    <div class="field field--full">
+                      <label for="attribution">Attribution / original source <span class="required" aria-hidden="true">*</span></label>
+                      <input
+                        class="input"
+                        id="attribution"
+                        name="attribution"
+                        type="text"
+                        maxlength="240"
+                        placeholder="Created by FTC Team 15371 OAKS"
+                        autocomplete="off"
+                        required
+                      />
+                      <span class="field-hint">Credit the team or person who made the resource. Mention if it is adapted from another source.</span>
+                    </div>
+                    <div class="field">
+                      <label for="source-url">Source URL</label>
+                      <input
+                        class="input"
+                        id="source-url"
+                        name="source"
+                        type="url"
+                        maxlength="500"
+                        placeholder="https://github.com/team/project"
+                        autocomplete="url"
+                      />
+                      <span class="field-hint">Optional original page, repository, or document.</span>
+                    </div>
+                    <div class="field">
+                      <label for="license">License <span class="required" aria-hidden="true">*</span></label>
+                      <select class="select" id="license" name="license" required>
+                        <option value="">Select a license</option>
+                        <option value="CC BY 4.0">CC BY 4.0</option>
+                        <option value="CC BY-SA 4.0">CC BY-SA 4.0</option>
+                        <option value="CC BY-NC 4.0">CC BY-NC 4.0</option>
+                        <option value="CC BY-NC-SA 4.0">CC BY-NC-SA 4.0</option>
+                        <option value="CC0 1.0">CC0 1.0 / Public domain</option>
+                        <option value="MIT">MIT</option>
+                        <option value="Apache-2.0">Apache-2.0</option>
+                        <option value="BSD-3-Clause">BSD-3-Clause</option>
+                        <option value="BSD-3-Clause-Clear">BSD-3-Clause-Clear</option>
+                        <option value="Other">Other (explain in the description)</option>
+                        <option value="No license specified">No license specified</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="contributor">Submitted by</label>
+                      <input
+                        class="input"
+                        id="contributor"
+                        name="contributor"
+                        type="text"
+                        maxlength="120"
+                        placeholder="Your name, team, or GitHub handle"
+                        autocomplete="name"
+                      />
+                      <span class="field-hint">Optional. This is for the issue, not the public resource card.</span>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="form-card" aria-labelledby="confirm-heading">
+                  <h2 id="confirm-heading">Before you submit</h2>
+                  <p class="form-card-sub">
+                    These checks keep the library useful, properly credited, and safe to share.
+                  </p>
+
+                  <div class="check-field">
+                    <input id="confirm-rights" name="rights" type="checkbox" required />
+                    <label for="confirm-rights">
+                      I created this resource or have permission from the creator to share it. It does not contain private information I am not allowed to publish.
+                    </label>
+                  </div>
+                  <div class="check-field">
+                    <input id="confirm-accurate" name="accurate" type="checkbox" required />
+                    <label for="confirm-accurate">
+                      The team number, season, attribution, and license information are accurate to the best of my knowledge.
+                    </label>
+                  </div>
+                  <div class="check-field">
+                    <input id="confirm-public" name="public" type="checkbox" required />
+                    <label for="confirm-public">
+                      I understand that approved resources are public and that the stated license controls how others may reuse them.
+                    </label>
+                  </div>
+                </section>
+              </form>
+            </div>
+
+            <aside class="submit-aside" aria-label="Submission summary">
+              <div class="preview-card">
+                <h2>Submission summary</h2>
+                <p class="preview-card-sub">This is what the maintainer will review.</p>
+
+                <div class="summary-list">
+                  <div class="summary-row">
+                    <span class="summary-label">Resource</span>
+                    <span class="summary-value" id="summary-name">Not added yet</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="summary-label">Team</span>
+                    <span class="summary-value" id="summary-team">Not added yet</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="summary-label">Season</span>
+                    <span class="summary-value" id="summary-season">Not added yet</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="summary-label">Category</span>
+                    <span class="summary-value" id="summary-category">Not added yet</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="summary-label">License</span>
+                    <span class="summary-value" id="summary-license">Not added yet</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="summary-label">Links</span>
+                    <span class="summary-value" id="summary-links">0</span>
+                  </div>
+                </div>
+
+                <div class="issue-actions">
+                  <button class="button button--primary button--block" id="open-issue" type="submit" form="submission-form">
+                    Open GitHub issue
+                  </button>
+                  <button class="button button--outline button--block" id="copy-json" type="button">
+                    Copy metadata JSON
+                  </button>
+                  <button class="button button--outline button--block" id="download-json" type="button">
+                    Download metadata JSON
+                  </button>
+                </div>
+
+                <div class="form-error" id="form-error" role="alert"></div>
+                <a class="manual-issue-link" id="manual-issue-link" href="#" target="_blank" rel="noopener noreferrer">
+                  Open the issue manually in a new tab
+                </a>
+
+                <p class="helper-text">
+                  GitHub will open in a new tab with the metadata filled in. Attach files
+                  there before submitting. For large files, paste a public link instead.
+                </p>
+
+                <details class="metadata-details">
+                  <summary>Preview metadata JSON</summary>
+                  <pre><code id="metadata-preview">{}</code></pre>
+                </details>
+              </div>
+
+              <div class="side-note">
+                <h2>What happens next</h2>
+                <ul>
+                  <li>A maintainer reviews the metadata, attribution, and license.</li>
+                  <li>If the resource is approved, it is added to the repository and JSON data.</li>
+                  <li>The resource appears on the library page, usually with a direct link.</li>
+                  <li>You may be asked to clarify a link, license, or file before approval.</li>
+                </ul>
+              </div>
+
+              <div class="side-note">
+                <h2>Rather use GitHub directly?</h2>
+                <p>
+                  You can open the
+                  <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/issues/new?template=resource-submission.yml" target="_blank" rel="noopener noreferrer">structured GitHub issue form</a>
+                  and fill it out manually.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="./" aria-label="FTC-Library home">
+              <svg class="brand-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                <rect x="3" y="7" width="19" height="5" rx="2.5" fill="currentColor" opacity=".28" />
+                <rect x="3" y="15" width="28" height="5" rx="2.5" fill="currentColor" opacity=".58" />
+                <rect x="3" y="23" width="22" height="5" rx="2.5" fill="currentColor" />
+                <circle cx="30" cy="25.5" r="3" fill="#ee6c2d" />
+              </svg>
+              <span>FTC<span class="brand-accent">-</span>Library</span>
+            </a>
+            <p>
+              A centralized, community-maintained library of FTC engineering knowledge.
+              Independent project, not affiliated with or endorsed by FIRST.
+            </p>
+          </div>
+          <div>
+            <p class="footer-title">Library</p>
+            <div class="footer-links">
+              <a href="index.html#library">Browse resources</a>
+              <a href="submit.html">Submit a resource</a>
+              <a href="about.html">About and guidelines</a>
+              <a href="data/resources.json">View resource data</a>
+            </div>
+          </div>
+          <div>
+            <p class="footer-title">Contribute</p>
+            <div class="footer-links">
+              <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+              <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/issues/new?template=resource-submission.yml" target="_blank" rel="noopener noreferrer">GitHub issue form</a>
+              <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contributing guide</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> FTC-Library contributors. Resources keep their own licenses.</span>
+          <a href="https://github.com/FTC-Team-15371-OAKS/FTC-Library/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Site code licensed under MIT</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
